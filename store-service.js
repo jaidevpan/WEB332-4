@@ -1,6 +1,11 @@
 const fs = require('fs');
 
+<<<<<<< HEAD
 let items = [];
+=======
+let items = [{ id: 1, category: 1, postDate: "2024-10-10", name: "Item 1" },
+  { id: 2, category: 2, postDate: "2024-09-15", name: "Item 2" },];
+>>>>>>> 33e2b675c1675a1c5000bfd45ff51e084f3b1892
 let categories = [];
 
 function initialize() {
@@ -45,6 +50,7 @@ function addItem(itemData) {
     // Assign a unique ID to the new item
     itemData.id = items.length + 1;
 
+<<<<<<< HEAD
     const currentDate = new Date();
     itemData.postDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
 
@@ -58,6 +64,10 @@ fs.writeFile('./data/items.json', JSON.stringify(items, null, 2), (err) => {
   } else {
       resolve();
   }});
+=======
+    // Add the new item to the in-memory store
+    items.push(itemData);
+>>>>>>> 33e2b675c1675a1c5000bfd45ff51e084f3b1892
 
     resolve(itemData);
   });
@@ -74,6 +84,7 @@ function getPublishedItems() {
   });
 }
 
+<<<<<<< HEAD
 function getPublishedItemsByCategory(category) {
   return new Promise((resolve, reject) => {
     const filteredItems = items.filter(
@@ -87,6 +98,8 @@ function getPublishedItemsByCategory(category) {
   });
 }
 
+=======
+>>>>>>> 33e2b675c1675a1c5000bfd45ff51e084f3b1892
 function getCategories() {
   return new Promise((resolve, reject) => {
     if (categories.length === 0) {
@@ -144,6 +157,10 @@ module.exports = {
   addItem,
   getItemsByCategory,
   getItemsByMinDate,
+<<<<<<< HEAD
   getItemById,
   getPublishedItemsByCategory
+=======
+  getItemById
+>>>>>>> 33e2b675c1675a1c5000bfd45ff51e084f3b1892
 };

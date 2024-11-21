@@ -12,7 +12,10 @@
   "dependencies": {
     "cloudinary": "^2.5.1",
     "express": "^4.21.1",
+<<<<<<< HEAD
     "express-handlebars": "^8.0.1",
+=======
+>>>>>>> 33e2b675c1675a1c5000bfd45ff51e084f3b1892
     "multer": "^1.4.5-lts.1",
     "streamifier": "^0.1.1"
   }
